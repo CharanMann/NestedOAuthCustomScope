@@ -22,6 +22,7 @@ Testing:
 ======== 
 * Resource Owner Password Credentials Grant:
 ```
+Get Access token:
 curl -X POST -H "Authorization: BASIC bXlDbGllbnRJRDpwYXNzd29yZA==" -H "Content-Type: application/x-www-form-urlencoded" -d 'grant_type=password&username=app1&password=password&scope=mail profile' "http://openam135.sample.com:8080/openam/oauth2/app/access_token"
 
 {
@@ -29,11 +30,11 @@ curl -X POST -H "Authorization: BASIC bXlDbGllbnRJRDpwYXNzd29yZA==" -H "Content-
   "expires_in": 3599,
   "token_type": "Bearer",
   "refresh_token": "18d36e70-b618-4f5a-bd44-e35000445b50",
-  "access_token": "ab2972d9-e460-43ad-95a0-e9a51cb2c602"
+  "access_token": "30288750-7a9d-4586-ba0b-2e814913708a"
 }
 
-
-curl -X GET -H "Authorization: Bearer 30288750-7a9d-4586-ba0b-2e814913708a" "http://openam135.sample.com:8080/openam/oauth2/employees/tokeninfo"
+Invoke Token Info: 
+curl -X GET -H "Authorization: Bearer 30288750-7a9d-4586-ba0b-2e814913708a" "http://openam135.sample.com:8080/openam/oauth2/app/tokeninfo"
 
 {
   "mail": "app1@sample.com",
@@ -59,6 +60,21 @@ curl -X GET -H "Authorization: Bearer 30288750-7a9d-4586-ba0b-2e814913708a" "htt
     "user_id": "app1",
     "given_name": "app1"
   }
+}
+
+
+Invoke Introspection 
+curl -X POST -H "Authorization: BASIC bXlDbGllbnRJRDpwYXNzd29yZA==" "http://openam135.sample.com:8080/openam/oauth2/app/introspect?token=30288750-7a9d-4586-ba0b-2e814913708a"
+
+{
+  "active": true,
+  "scope": "mail profile",
+  "client_id": "myClientID",
+  "user_id": "app1",
+  "token_type": "access_token",
+  "exp": 1487268165,
+  "sub": "app1",
+  "iss": "http://openam135.sample.com:8080/openam/oauth2/app"
 }
 ```
 
