@@ -1,5 +1,5 @@
 /*
- * Copyright © 2016 ForgeRock, AS.
+ * Copyright © 2017 ForgeRock, AS.
  *
  * This is unsupported code made available by ForgeRock for community development subject to the license detailed below. 
  * The code is provided on an "as is" basis, without warranty of any kind, to the fullest extent permitted by law. 
@@ -21,7 +21,7 @@
  * You can obtain a copy of the License at https://forgerock.org/cddlv1-0/. See the License for the specific language governing 
  * permission and limitations under the License.
  *
- * Portions Copyrighted 2016 Charan Mann
+ * Portions Copyrighted 2017 Charan Mann
  *
  * OIDCSessionStatePlugin: Created by Charan Mann on 02/16/17 , 10:59 AM.
  */
@@ -56,7 +56,7 @@ import static org.forgerock.openam.oauth2.OAuth2Constants.TokenEndpoint.CLIENT_C
 import static org.forgerock.openam.scripting.ScriptConstants.OIDC_CLAIMS_NAME;
 
 /**
- * Custom OpenAM Scope validator: This sets "session_state" in token response for OAuth Authorization Code and implicit flows.
+ * Custom OpenAM Scope validator: Sets Nested scope for OAuth Access Token
  */
 @Singleton
 public class NestedOAuthScopeATValidator extends OpenAMScopeValidator {
