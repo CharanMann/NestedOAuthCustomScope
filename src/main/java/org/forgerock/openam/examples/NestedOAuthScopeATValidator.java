@@ -61,20 +61,14 @@ import static org.forgerock.openam.scripting.ScriptConstants.OIDC_CLAIMS_NAME;
 @Singleton
 public class NestedOAuthScopeATValidator extends OpenAMScopeValidator {
 
-    private static final Map<String, String> PROFILE_ATTR_MAPPING = new HashMap<>();
+    private static final Map<String, String> PAYMENT_ATTR_MAPPING = new HashMap<>();
     private static final String MULTI_ATTRIBUTE_SEPARATOR = ",";
 
     static {
-        PROFILE_ATTR_MAPPING.put("email", "mail");
-        PROFILE_ATTR_MAPPING.put("address", "postaladdress");
-        PROFILE_ATTR_MAPPING.put("phone_number", "telephonenumber");
-        PROFILE_ATTR_MAPPING.put("given_name", "givenname");
-        PROFILE_ATTR_MAPPING.put("zoneinfo", "preferredtimezone");
-        PROFILE_ATTR_MAPPING.put("family_name", "sn");
-        PROFILE_ATTR_MAPPING.put("locale", "preferredlocale");
-        PROFILE_ATTR_MAPPING.put("name", "cn");
-        PROFILE_ATTR_MAPPING.put("sub", "uid");
-        PROFILE_ATTR_MAPPING.put("user_id", "uid");
+        PAYMENT_ATTR_MAPPING.put("email", "mail");
+        PAYMENT_ATTR_MAPPING.put("address", "postaladdress");
+        PAYMENT_ATTR_MAPPING.put("phone_number", "telephonenumber");
+        PAYMENT_ATTR_MAPPING.put("sub", "uid");
     }
 
     private final IdentityManager identityManager;
@@ -108,7 +102,7 @@ public class NestedOAuthScopeATValidator extends OpenAMScopeValidator {
     public Map<String, Object> evaluateScope(AccessToken accessToken) {
         Map<String, Object> scopesMap = super.evaluateScope(accessToken);
         Set<String> scopes = accessToken.getScope();
-        Map<String, Object> profileMap = new HashMap<>();
+        Map<String, Object> paymentMap = new HashMap<>();
 
         final String resourceOwner = accessToken.getResourceOwnerId();
         final String clientId = accessToken.getClientId();
@@ -125,11 +119,11 @@ public class NestedOAuthScopeATValidator extends OpenAMScopeValidator {
             logger.error("Unable to get user identity", e);
         }
 
-        if (scopes.contains("profile")) {
-            for (String profileAttr : PROFILE_ATTR_MAPPING.keySet()) {
+        if (scopes.contains("paymentInfo")) {
+            for (String paymentAttr : PAYMENT_ATTR_MAPPING.keySet()) {
 
                 try {
-                    Set<String> attributes = id.getAttribute(PROFILE_ATTR_MAPPING.get(profileAttr));
+                    Set<String> attributes = id.getAttribute(PAYMENT_ATTR_MAPPING.get(paymentAttr));
                     StringBuilder builder = new StringBuilder();
                     if (CollectionUtils.isNotEmpty(attributes)) {
                         Iterator<String> attrValues = attributes.iterator();
@@ -140,14 +134,14 @@ public class NestedOAuthScopeATValidator extends OpenAMScopeValidator {
                             }
                         }
                     }
-                    profileMap.put(profileAttr, builder);
+                    paymentMap.put(paymentAttr, builder);
                 } catch (IdRepoException | SSOException e) {
                     logger.error("Unable to get attribute", e);
                 }
             }
         }
 
-        scopesMap.put("profile", profileMap);
+        scopesMap.put("paymentInfo", paymentMap);
 
         return scopesMap;
     }

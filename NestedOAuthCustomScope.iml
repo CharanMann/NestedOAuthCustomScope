@@ -9,20 +9,20 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-core:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-license-servlet:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-license-core:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-shared:13.5.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-core:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-license-servlet:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-license-core:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-shared:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-multibindings:3.0" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.2" level="project" />
     <orderEntry type="library" name="Maven: com.googlecode.java-ipv6:java-ipv6:0.14" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.7" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-audit-context:13.5.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-audit-context:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons:forgerock-audit-core:20.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-audit-core:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-coretoken:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-idsvcs-schema:13.5.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-audit-core:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-coretoken:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-idsvcs-schema:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:1.0.6" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.parsers:jaxp-api:1.4.2" level="project" />
     <orderEntry type="library" name="Maven: com.sun.xml.bind:jaxb1-impl:2.0.2" level="project" />
@@ -30,18 +30,18 @@
     <orderEntry type="library" name="Maven: com.sun.msv.datatype.xsd:xsdlib:20060615" level="project" />
     <orderEntry type="library" name="Maven: isorelax:isorelax:20030108" level="project" />
     <orderEntry type="library" name="Maven: relaxngDatatype:relaxngDatatype:20020414" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-mib-schema:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-xacml3-schema:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-ldap-utils:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-annotations:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-license-manager-cli:13.5.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-mib-schema:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-xacml3-schema:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-ldap-utils:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-annotations:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-license-manager-cli:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons:json-web-token:20.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.6.3" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.6.3" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons:json-resource-http:20.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons:json-resource:20.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons:forgerock-util:20.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-tokens:13.5.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-tokens:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons:forgerock-bloomfilter-core:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons.guava:forgerock-guava-hash:18.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons:forgerock-bloomfilter-monitoring:1.0.1" level="project" />
@@ -102,6 +102,7 @@
     <orderEntry type="library" name="Maven: javax.ws.rs:jsr311-api:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20090211" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:log4j-over-slf4j:1.7.5" level="project" />
     <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.1" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.0" level="project" />
@@ -114,14 +115,14 @@
     <orderEntry type="library" name="Maven: org.mockito:mockito-all:1.10.19" level="project" />
     <orderEntry type="library" name="Maven: org.assertj:assertj-core:2.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.hdrhistogram:HdrHistogram:2.1.4" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-oauth2:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-rest:13.5.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-oauth2:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-rest:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.restlet.jee:org.restlet.ext.xml:2.3.4" level="project" />
     <orderEntry type="library" name="Maven: org.restlet.jee:org.restlet.ext.slf4j:2.3.4" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-slf4j:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-http:13.5.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-slf4j:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-http:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.http:chf-http-servlet:20.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-audit-configuration:13.5.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-audit-configuration:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons:forgerock-audit-handler-jms:20.1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.jms:javax.jms-api:2.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:2.4.1" level="project" />
@@ -133,8 +134,8 @@
     <orderEntry type="library" name="Maven: org.forgerock.commons.guava:forgerock-guava-escape:18.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons:forgerock-jaspi-jwt-session-module:20.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.jgrapht:jgrapht-core:0.9.1" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-scripting:13.5.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-http-client:13.5.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-scripting:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-http-client:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.mozilla:rhino:1.7R4" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-jsr223:2.4.6" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy:2.4.6" level="project" />
@@ -165,7 +166,7 @@
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.13" level="project" />
     <orderEntry type="library" name="Maven: org.restlet.jee:org.restlet.ext.freemarker:2.3.4" level="project" />
     <orderEntry type="library" name="Maven: org.restlet.jee:org.restlet.ext.servlet:2.3.4" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-restlet:13.5.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-restlet:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.servicemix.bundles:org.apache.servicemix.bundles.javax-inject:1_2" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
   </component>

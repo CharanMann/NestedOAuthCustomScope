@@ -23,10 +23,10 @@ Testing:
 * Resource Owner Password Credentials Grant:
 ```
 Get Access token:
-curl -X POST -H "Authorization: BASIC bXlDbGllbnRJRDpwYXNzd29yZA==" -H "Content-Type: application/x-www-form-urlencoded" -d 'grant_type=password&username=app1&password=password&scope=mail profile' "http://openam135.sample.com:8080/openam/oauth2/app/access_token"
+curl -X POST -H "Authorization: BASIC bXlDbGllbnRJRDpwYXNzd29yZA==" -H "Content-Type: application/x-www-form-urlencoded" -d 'grant_type=password&username=app1&password=password&scope=mail paymentInfo' "http://openam135.sample.com:8080/openam/oauth2/app/access_token"
 
 {
-  "scope": "mail profile",
+  "scope": "mail paymentInfo",
   "expires_in": 3599,
   "token_type": "Bearer",
   "refresh_token": "18d36e70-b618-4f5a-bd44-e35000445b50",
@@ -37,38 +37,34 @@ Invoke Token Info:
 curl -X GET -H "Authorization: Bearer 30288750-7a9d-4586-ba0b-2e814913708a" "http://openam135.sample.com:8080/openam/oauth2/app/tokeninfo"
 
 {
-  "mail": "app1@sample.com",
+  "paymentInfo": {
+    "sub": "app1",
+    "phone_number": "2223334444",
+    "email": "app1@sample.com",
+    "address": "222 Main St, Somewhere"
+  },
   "scope": [
-    "mail",
+    "paymentInfo",
+    "openid",
     "profile"
   ],
   "grant_type": "password",
   "realm": "/app",
+  "openid": "",
   "token_type": "Bearer",
-  "expires_in": 2854,
+  "expires_in": 3591,
   "client_id": "myClientID",
-  "access_token": "30288750-7a9d-4586-ba0b-2e814913708a",
-  "profile": {
-    "zoneinfo": "",
-    "sub": "app1",
-    "phone_number": "2223334444",
-    "email": "app1@sample.com",
-    "address": "222 Main St, Somewhere",
-    "locale": "",
-    "name": "fapp1",
-    "family_name": "lapp1",
-    "user_id": "app1",
-    "given_name": "app1"
-  }
+  "access_token": "4ec72443-0267-471c-83c0-20efa76cd6b7",
+  "profile": ""
 }
 
 
 Invoke Introspection 
-curl -X POST -H "Authorization: BASIC bXlDbGllbnRJRDpwYXNzd29yZA==" "http://openam135.sample.com:8080/openam/oauth2/app/introspect?token=30288750-7a9d-4586-ba0b-2e814913708a"
+curl -X POST -H "Authorization: BASIC bXlDbGllbnRJRDpwYXNzd29yZA==" "http://openam135.sample.com:8080/openam/oauth2/app/introspect?token=4ec72443-0267-471c-83c0-20efa76cd6b7"
 
 {
   "active": true,
-  "scope": "mail profile",
+  "scope": "mail paymentInfo",
   "client_id": "myClientID",
   "user_id": "app1",
   "token_type": "access_token",
