@@ -52,6 +52,11 @@
             <name>maven.forgerock.org-releases</name>
             <url>http://maven.forgerock.org/repo/private-releases</url>
         </repository>
+        <repository>
+            <id>forgerock-internal-releases</id>
+            <name>Forgerock Internal Repository</name>
+            <url>http://maven.forgerock.org/repo/internal-releases</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -60,13 +65,16 @@
             <artifactId>openam-core</artifactId>
             <version>${openam.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.forgerock.openam</groupId>
             <artifactId>openam-oauth2</artifactId>
             <version>${openam.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.forgerock.openam</groupId>
+            <artifactId>openam-shared</artifactId>
+            <version>${openam.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.servicemix.bundles</groupId>
             <artifactId>org.apache.servicemix.bundles.javax-inject</artifactId>

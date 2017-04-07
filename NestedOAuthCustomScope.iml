@@ -12,12 +12,6 @@
     <orderEntry type="library" name="Maven: org.forgerock.openam:openam-core:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.openam:openam-license-servlet:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.openam:openam-license-core:13.5.0" level="project" />
-    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-shared:13.5.0" level="project" />
-    <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-multibindings:3.0" level="project" />
-    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
-    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.2" level="project" />
-    <orderEntry type="library" name="Maven: com.googlecode.java-ipv6:java-ipv6:0.14" level="project" />
-    <orderEntry type="library" name="Maven: joda-time:joda-time:2.7" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.openam:openam-audit-context:13.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.commons:forgerock-audit-core:20.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.openam:openam-audit-core:13.5.0" level="project" />
@@ -167,6 +161,12 @@
     <orderEntry type="library" name="Maven: org.restlet.jee:org.restlet.ext.freemarker:2.3.4" level="project" />
     <orderEntry type="library" name="Maven: org.restlet.jee:org.restlet.ext.servlet:2.3.4" level="project" />
     <orderEntry type="library" name="Maven: org.forgerock.openam:openam-restlet:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.forgerock.openam:openam-shared:13.5.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject.extensions:guice-multibindings:3.0" level="project" />
+    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.2" level="project" />
+    <orderEntry type="library" name="Maven: com.googlecode.java-ipv6:java-ipv6:0.14" level="project" />
+    <orderEntry type="library" name="Maven: joda-time:joda-time:2.7" level="project" />
     <orderEntry type="library" name="Maven: org.apache.servicemix.bundles:org.apache.servicemix.bundles.javax-inject:1_2" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
   </component>
