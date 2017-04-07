@@ -76,7 +76,32 @@ public class NestedOAuthScopeATValidator extends OpenAMScopeValidator {
 
 
     /**
-     * Constructs a new OIDCSessionStateValidator.
+     * Constructs a new NestedOAuthScopeATValidator. For OpenAM v14.0
+     *
+     * @param identityManager An instance of the IdentityManager.
+     * @param openIDTokenIssuer An instance of the OpenIDTokenIssuer.
+     * @param providerSettingsFactory An instance of the CTSPersistentStore.
+     * @param openAMSettings An instance of the OpenAMSettings.
+     * @param scriptEvaluator An instance of the OIDC Claims ScriptEvaluator.
+     * @param scriptingServiceFactory An instance of the ScriptingServiceFactory.
+     * @param agentValidator An instance of {@code LDAPAgentValidator} used to retrieve the token restriction.
+     * @param sessionService An instance of {@code SessionService}.
+     */
+    /**
+    @Inject
+    public NestedOAuthScopeATValidator(IdentityManager identityManager, OpenIDTokenIssuer openIDTokenIssuer,
+                                OAuth2ProviderSettingsFactory providerSettingsFactory, OpenAMSettings openAMSettings,
+                                @Named(OIDC_CLAIMS_NAME) ScriptEvaluator scriptEvaluator,
+                                ScriptingServiceFactory scriptingServiceFactory,
+                                TokenRestrictionResolver agentValidator,
+                                SessionService sessionService) {
+        super(identityManager,openIDTokenIssuer,providerSettingsFactory,openAMSettings,scriptEvaluator, scriptingServiceFactory, agentValidator, sessionService);
+        this.identityManager = identityManager;
+    }
+    **/
+
+    /**
+     * Constructs a new NestedOAuthScopeATValidator. For OpenAM v13.5
      *
      * @param identityManager         An instance of the IdentityManager.
      * @param openIDTokenIssuer       An instance of the OpenIDTokenIssuer.
