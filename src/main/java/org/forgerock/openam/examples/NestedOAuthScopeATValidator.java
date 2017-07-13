@@ -28,13 +28,14 @@
 
 package org.forgerock.openam.examples;
 
+import com.iplanet.dpro.session.service.SessionService;
 import com.iplanet.sso.SSOException;
 import com.sun.identity.idm.AMIdentity;
 import com.sun.identity.idm.IdRepoException;
 import com.sun.identity.shared.debug.Debug;
 import org.forgerock.oauth2.core.AccessToken;
 import org.forgerock.oauth2.core.OAuth2ProviderSettingsFactory;
-import org.forgerock.oauth2.core.ResourceOwnerSessionValidator;
+import org.forgerock.openam.agent.TokenRestrictionResolver;
 import org.forgerock.openam.oauth2.IdentityManager;
 import org.forgerock.openam.oauth2.OpenAMScopeValidator;
 import org.forgerock.openam.scripting.ScriptEvaluator;
@@ -42,7 +43,6 @@ import org.forgerock.openam.scripting.service.ScriptingServiceFactory;
 import org.forgerock.openam.utils.CollectionUtils;
 import org.forgerock.openam.utils.OpenAMSettings;
 import org.forgerock.openidconnect.OpenIDTokenIssuer;
-import org.forgerock.openidconnect.OpenIdConnectClientRegistrationStore;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -53,7 +53,6 @@ import java.util.Map;
 import java.util.Set;
 
 import static org.forgerock.openam.oauth2.OAuth2Constants.TokenEndpoint.CLIENT_CREDENTIALS;
-import static org.forgerock.openam.scripting.ScriptConstants.OIDC_CLAIMS_NAME;
 
 /**
  * Custom OpenAM Scope validator: Sets Nested scope for OAuth Access Token
@@ -78,47 +77,18 @@ public class NestedOAuthScopeATValidator extends OpenAMScopeValidator {
     /**
      * Constructs a new NestedOAuthScopeATValidator. For OpenAM v14.0
      *
-     * @param identityManager An instance of the IdentityManager.
-     * @param openIDTokenIssuer An instance of the OpenIDTokenIssuer.
-     * @param providerSettingsFactory An instance of the CTSPersistentStore.
-     * @param openAMSettings An instance of the OpenAMSettings.
-     * @param scriptEvaluator An instance of the OIDC Claims ScriptEvaluator.
-     * @param scriptingServiceFactory An instance of the ScriptingServiceFactory.
-     * @param agentValidator An instance of {@code LDAPAgentValidator} used to retrieve the token restriction.
-     * @param sessionService An instance of {@code SessionService}.
-     */
-    /**
-    @Inject
-    public NestedOAuthScopeATValidator(IdentityManager identityManager, OpenIDTokenIssuer openIDTokenIssuer,
-                                OAuth2ProviderSettingsFactory providerSettingsFactory, OpenAMSettings openAMSettings,
-                                @Named(OIDC_CLAIMS_NAME) ScriptEvaluator scriptEvaluator,
-                                ScriptingServiceFactory scriptingServiceFactory,
-                                TokenRestrictionResolver agentValidator,
-                                SessionService sessionService) {
-        super(identityManager,openIDTokenIssuer,providerSettingsFactory,openAMSettings,scriptEvaluator, scriptingServiceFactory, agentValidator, sessionService);
-        this.identityManager = identityManager;
-    }
-    **/
-
-    /**
-     * Constructs a new NestedOAuthScopeATValidator. For OpenAM v13.5
-     *
      * @param identityManager         An instance of the IdentityManager.
      * @param openIDTokenIssuer       An instance of the OpenIDTokenIssuer.
      * @param providerSettingsFactory An instance of the CTSPersistentStore.
      * @param openAMSettings          An instance of the OpenAMSettings.
      * @param scriptEvaluator         An instance of the OIDC Claims ScriptEvaluator.
-     * @param clientRegistrationStore An instance of the OpenIdConnectClientRegistrationStore.
      * @param scriptingServiceFactory An instance of the ScriptingServiceFactory.
+     * @param agentValidator          An instance of {@code LDAPAgentValidator} used to retrieve the token restriction.
+     * @param sessionService          An instance of {@code SessionService}.
      */
     @Inject
-    public NestedOAuthScopeATValidator(IdentityManager identityManager, OpenIDTokenIssuer openIDTokenIssuer,
-                                       OAuth2ProviderSettingsFactory providerSettingsFactory, OpenAMSettings openAMSettings,
-                                       @Named(OIDC_CLAIMS_NAME) ScriptEvaluator scriptEvaluator,
-                                       OpenIdConnectClientRegistrationStore clientRegistrationStore,
-                                       ScriptingServiceFactory scriptingServiceFactory, ResourceOwnerSessionValidator resourceOwnerSessionValidator) {
-        super(identityManager, openIDTokenIssuer, providerSettingsFactory, openAMSettings,
-                scriptEvaluator, clientRegistrationStore, scriptingServiceFactory);
+    public NestedOAuthScopeATValidator(IdentityManager identityManager, OpenIDTokenIssuer openIDTokenIssuer, OAuth2ProviderSettingsFactory providerSettingsFactory, OpenAMSettings openAMSettings, @Named("OIDC_CLAIMS") ScriptEvaluator scriptEvaluator, ScriptingServiceFactory scriptingServiceFactory, TokenRestrictionResolver agentValidator, SessionService sessionService) {
+        super(identityManager, openIDTokenIssuer, providerSettingsFactory, openAMSettings, scriptEvaluator, scriptingServiceFactory, agentValidator, sessionService);
         this.identityManager = identityManager;
     }
 

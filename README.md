@@ -7,7 +7,7 @@
 Pre-requisites :
 ================
 1. OpenAM has been installed and configured.
-2. OpenAM has been configured as OIDC provider. Check https://backstage.forgerock.com/docs/openam/13.5/admin-guide#configure-openid-connect-provider 
+2. OpenAM has been configured as OIDC provider. Check https://backstage.forgerock.com/docs/am/5/oauth2-guide#configure-oauth2-authz 
 3. Maven has been installed and configured.
 
 OpenAM Configuration:
